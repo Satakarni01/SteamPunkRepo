@@ -1,0 +1,17 @@
+<template> 
+    <div>
+        <lightning-input name="firstNum" type="text" label="First Number" value={txtFirstNumber} onchange={changeHandler} ></lightning-input>
+        <lightning-input name="secondNum" type="text" label="Second Number" value={txtSecondNumber} onchange={changeHandler}></lightning-input> 
+        Result: <lightning-formatted-number value={result} format-style="decimal" maximum-fraction-digits="2"></lightning-formatted-number>
+        <p align="center">
+            <lightning-button label="Add" onclick={add}></lightning-button>
+            <lightning-button label="Subtract" onclick={subtract}></lightning-button>
+            <lightning-button label="Multiply" onclick={multiply}></lightning-button>   
+            <lightning-button label="Divide" onclick={divide}></lightning-button>
+            <lightning-button label="Modulus" onclick={modulus}></lightning-button>
+
+        </p>
+    </div>
+    
+    
+</template>
