@@ -34,5 +34,9 @@ public with sharing class AccountController {
     }
 
     public class AccountUpdateException extends Exception {
+        public void logError() {
+            // Log error here
+            System.debug('AccountUpdateException: ');
+        }
     }
 }
