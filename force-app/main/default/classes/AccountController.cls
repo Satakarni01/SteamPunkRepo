@@ -1,4 +1,5 @@
 public with sharing class AccountController {
+    /* Used for Wired Adapter Example*/
     @AuraEnabled(cacheable=true)
     public static List<Account> getAccountList() {
         return [SELECT Id, Name FROM Account WITH USER_MODE LIMIT 10];
