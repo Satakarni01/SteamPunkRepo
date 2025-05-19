@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Parent Card" icon-name="standard:case">
+        <div class="slds-m-around_medium">
+             <c-me-03-feed-child customer-name={parentMessage}></c-me-03-feed-child>
+             <lightning-button label="Parent Button" onclick={parentClick}></lightning-button>
+             <lightning-button label="Invoke Child" onclick={invokeChild}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
