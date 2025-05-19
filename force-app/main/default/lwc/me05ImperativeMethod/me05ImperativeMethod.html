@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Imperative Method" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+         <lightning-button label="List Contacts" onclick={listContacts}></lightning-button>
+         <template lwc:if={receivedContacts}>
+            <template for:each={receivedContacts} for:item="contact">
+                <div class="passport" key={contact.Id}>
+                    <span>{contact.Name}</span>
+                    <img src={contact.Picture__c} title={contact.Title} alt={contact.Title} width="50px" height="50px" style="border:1px solid rgb(12, 167, 170); vertical-align:middle"/>
+                </div>
+            </template>
+         </template>
+         <template lwc:if={errorlist}>
+            <template for:each={errorlist} for:item="err">
+                <span key={err.Id}>{err.message}</span>">
+            </template>
+         </template>
+
+        </div>
+    </lightning-card>
+</template>

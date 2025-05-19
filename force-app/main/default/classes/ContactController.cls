@@ -1,4 +1,5 @@
 public with sharing class ContactController {
+    //used in LWC Imperative method
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContactList() {
         return [
